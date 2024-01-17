@@ -1,8 +1,10 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import type { PreloadedState } from "@reduxjs/toolkit";
+import { counter } from "./slices/counter";
 import { pokemonApi } from "./services/pokemon";
 
 const rootReducer = combineReducers({
+  counter,
   [pokemonApi.reducerPath]: pokemonApi.reducer,
 });
 
