@@ -1,10 +1,9 @@
-import { useDispatch, useSelector } from "react-redux";
-
 import { counterActions, selectCount } from "./counterSlice";
+import { useAppDispatch, useAppSelector } from "../hooks";
 
 export const Counter = () => {
-  const count = useSelector(selectCount);
-  const dispatch = useDispatch();
+  const count = useAppSelector(selectCount);
+  const dispatch = useAppDispatch();
   return (
     <div>
       <h3>Counter</h3>
